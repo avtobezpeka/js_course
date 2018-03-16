@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Товары</title>
+    <meta name="description" content="Описание страницы для поисковых систем">
+    <meta name="keywords" content="Наиболее важные ключевые слова страницы для поисковых систем">
+    <meta name="author" content="Alla">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="icon" href="./favicon.ico">
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <!--load everything-->
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+    <link href="styles/style.css" rel="stylesheet" type="text/css" />
+    <link href="styles/grid.css" rel="stylesheet" type="text/css" />
+    <link href="styles/product.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <div class="header-fixed">
+        <div class="navbar-header">
+            <a class="navbar-header_logo" href="#">LOGO</a>
+        </div>
+        <!-- <div class="header-nav__logo"><a href="#"><img src="images/logo_small.jpg"></a></div> -->
+        <nav class="nav">
+
+            <label id="burger" for="menu-trigger">
+                <i class="fas fa-bars"></i>
+            </label>
+
+            <input type="checkbox" id="menu-trigger">
+
+            <ul class="nav_ul align_right">
+                <li>
+                    <a href="index.html">Главная</a>
+                </li>
+                <li>
+                    <a href="products.html">Товары</a>
+                </li>
+                <li>
+                    <a href="blog.html">Блог</a>
+                </li>
+                <li>
+                    <a href="about.html">О нас</a>
+                </li>
+                <li>
+                    <a href="contacts.html">Контакты</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-cart-arrow-down"></i>&nbsp;Корзина</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="container-home">
+        
+        <h1>Выберите велосипед:</h1>
+        
+        <div class="grid-layer">
+            <div class="grid-item">
+                <div class="product-wrapper">
+                    <div class="product">
+                        <div class="product-header">
+                            <i class="fas fa-cart-arrow-down product-header__icon"></i>
+                            <p class="product-header__name">Детский <br> велосипед</p>
+                        </div>
+                        <div class="product-picture">
+                            <img src="images/vel2.jpg" alt="Детский велосипед">
+                            <div class="short-description">
+                                <p>Маленький велосипед для детей 5-7 лет</p>
+                            </div>
+                        </div>
+                        <div class="product-menu">
+                            <div class="product-price">$100</div>
+                            <div class="buy-now">Купить</div>
+                            <div class="product-detail">Описание</div>
+                            <div class="how-many">
+                                <input type="button" class="minus btn" value="-">
+                                <input type="text" class="input-text quantity text" value="1" size="3">
+                                <input type="button" class="plus btn" value="+">
+
+                            </div>
+                            <div class="cancel">Отмена</div>
+                            <div class="add-to-cart">В корзину</div>
+                        </div>
+                        <div class="product-back">
+                            <span class="product-added">
+                                    <i class="far fa-thumbs-up fa-5x"></i>
+                                    <p>Велик куплен!</p>
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="product-wrapper">
+                    <div class="product">
+                        <div class="product-header">
+                            <i class="fas fa-cart-arrow-down product-header__icon"></i>
+                            <p class="product-header__name">Шоссейный <br> велосипед</p>
+                        </div>
+                        <div class="product-picture">
+                            <img src="images/vel1.jpg" alt="Детский велосипед">
+                            <div class="short-description">
+                                <p>Велосипед для использования на асфальте</p>
+                            </div>
+                        </div>
+                        <div class="product-menu">
+                            <div class="product-price">$100</div>
+                            <div class="buy-now">Купить</div>
+                            <div class="product-detail">Описание</div>
+                            <div class="how-many">
+                                <input type="button" class="minus" value="-">
+                                <input type="text" class="input-text quantity text" value="1" size="3">
+                                <input type="button" class="plus" value="+">
+                            </div>
+                            <div class="cancel">Отмена</div>
+                            <div class="add-to-cart">В корзину</div>
+                        </div>
+                        <div class="product-back">
+                            <span class="product-added">
+                                    <i class="far fa-thumbs-up fa-5x"></i>
+                                    <p>Велик куплен!</p>
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="product-wrapper">
+                    <div class="product">
+                        <div class="product-header">
+                            <i class="fas fa-cart-arrow-down product-header__icon"></i>
+                            <p class="product-header__name">Женский <br> велосипед</p>
+                        </div>
+                        <div class="product-picture">
+                            <img src="images/vel3.jpg" alt="Детский велосипед">
+                            <div class="short-description">
+                                <p>Горный велосипед для женщин</p>
+                            </div>
+                        </div>
+                        <div class="product-menu">
+                            <div class="product-price">$100</div>
+                            <div class="buy-now">Купить</div>
+                            <div class="product-detail">Описание</div>
+                            <div class="how-many">
+                                <input type="button" class="minus btn" value="-">
+                                <input type="text" class="input-text quantity text" value="1" size="3">
+                                <input type="button" class="plus btn" value="+">
+
+                            </div>
+                            <div class="cancel">Отмена</div>
+                            <div class="add-to-cart">В корзину</div>
+                        </div>
+                        <div class="product-back">
+                            <span class="product-added">
+                                    <i class="far fa-thumbs-up fa-5x"></i>
+                                    <p>Велик куплен!</p>
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+
+            </div>
+            <div class="grid-item">
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    
+    $('.buy-now').each(function(index, element){
+        $(element).on('click', function(e){
+            $(e.target).parents('.product-menu').css('top', '55%');
+            $(e.target).parents('.product').find('.product-header').slideUp(500);
+            $(e.target).parents('.product-menu').find('.buy-now').css('display','none');
+            $(e.target).parents('.product-menu').find('.product-detail').css('display','block');
+        });
+    });
+
+    $('.cancel').each(function(index, element){
+        $(element).on('click', function(e){
+            $(e.target).parents('.product-menu').css('top', '86%');
+            $(e.target).parents('.product').find('.product-header').slideDown(500);
+            $(e.target).parents('.product-menu').find('.buy-now').css('display','block');
+            $(e.target).parents('.product-menu').find('.product-detail').css('display','none');
+        });
+    });
+
+    $('.add-to-cart').each(function(index, element){
+        $(element).on('click', function(e){
+            var y = 180;
+            $(e.target).parents('.product-wrapper').css('transform','rotateY('+y+'deg)');
+            $(e.target).parents('.grid-item').find('.product-back').addClass('back-is-visible');
+
+            $(e.target).parents('.product-wrapper').delay(2000).queue(function(){
+            $(this).css('transform','rotateY(0deg)').dequeue();
+            $(e.target).parents('.product').find('.product-back').removeClass('back-is-visible');
+            $(e.target).parents('.product-menu').css('top', '86%');
+            $(e.target).parents('.product').find('.product-header').slideDown(500);
+            $(e.target).parents('.product-menu').find('.buy-now').css('display','block');
+            $(e.target).parents('.product-menu').find('.product-detail').css('display','none');
+            
+        });
+
+        // $(e.target).parents('.product-wrapper').delay(3000).queue(function() {
+        //             $(this).css({'transform': 'rotateY(0deg)'}).dequeue();
+        //             $(e.target).parents('.product').find('p').slideDown();
+        //             $(e.target).parents('.product').find('.product-menu').css('top', '80%');
+        //             $(e.target).parents('.product').find('.product-detail').toggle();
+        //             $(e.target).parents('.product').find('.buy-now').toggle();
+        //             $(e.target).parents('.product').find('.icon').toggle();
+        //         });
+        });
+
+        
+
+    });
+
+
+
+</script>
+
+</body>
+
+</html>

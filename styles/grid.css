@@ -1,0 +1,11 @@
+.grid-layer {
+    display: grid;
+    background-color: beige;
+    max-width: 100%;
+    min-width: 300px;
+    margin:0 auto;
+    padding-top: 100px;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-gap: 20px;
+    justify-content: space-evenly;
+}
