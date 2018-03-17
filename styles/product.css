@@ -40,6 +40,10 @@ box-shadow: 0 4px 13px 3px rgba(173, 173, 173, 0.5);
     padding: 0 10px;
 }
 
+.description {
+    display:none;
+}
+
 .product-menu {
     position: absolute;
     top: 86%;
@@ -59,6 +63,23 @@ box-shadow: 0 4px 13px 3px rgba(173, 173, 173, 0.5);
 
 .product-detail {
     display: none;
+}
+
+.product-detail__expand {
+    display: none;
+    position: fixed;
+    top: 20%; 
+    left: 8%;
+    width: 84%;
+    min-width: 300px;
+    height: 500px;
+    background-color: white;
+    /* opacity: 0.95; */
+    box-shadow: 0 4px 13px 3px rgba(173, 173, 173, 0.5);
+}
+
+.close-detail {
+    color: rgb(173,173,173);
 }
 
 .product-price, .product-detail, .cancel, .add-to-cart, .buy-now {
@@ -146,6 +167,24 @@ box-shadow: 0 4px 13px 3px rgba(173, 173, 173, 0.5);
 .back-is-visible {
     z-index: 5;
 }
+
+.aside-cart {
+    position: absolute;
+    background: yellowgreen;
+    width: 300px !important;
+    height: 100%;
+    top:0;
+    left:81%;
+    z-index: 1000;
+    opacity: 0.9;
+    display: none;
+    box-shadow: 0 4px 13px 3px rgba(173, 173, 173, 0.5);
+}
+
+.close {
+    color:  rgb(126, 80, 80);
+}
+
 
 /* .product{
     background-color: $primary-color;

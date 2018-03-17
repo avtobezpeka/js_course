@@ -29,6 +29,9 @@
             <a class="navbar-header_logo" href="#">LOGO</a>
         </div>
         <!-- <div class="header-nav__logo"><a href="#"><img src="images/logo_small.jpg"></a></div> -->
+        <div class="dropdown-menu">
+            <input class="dropdown-menu__search" type="text" value="search">
+        </div>
         <nav class="nav">
 
             <label id="burger" for="menu-trigger">
@@ -41,8 +44,8 @@
                 <li>
                     <a href="index.html">Главная</a>
                 </li>
-                <li>
-                    <a href="products.html">Товары</a>
+                <li class="products-dropdown">
+                    <a href="#"><i class="fas fa-caret-down"></i>&nbsp;Товары</a>
                 </li>
                 <li>
                     <a href="blog.html">Блог</a>
@@ -54,10 +57,11 @@
                     <a href="contacts.html">Контакты</a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a class="shopping-cart" href="#">
                         <i class="fas fa-cart-arrow-down"></i>&nbsp;Корзина</a>
                 </li>
             </ul>
+            
         </nav>
     </div>
 
@@ -77,6 +81,9 @@
                             <img src="images/vel2.jpg" alt="Детский велосипед">
                             <div class="short-description">
                                 <p>Маленький велосипед для детей 5-7 лет</p>
+                            </div>
+                            <div class="description">
+                                111111111111111111111111<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, ea.
                             </div>
                         </div>
                         <div class="product-menu">
@@ -114,6 +121,9 @@
                             <div class="short-description">
                                 <p>Велосипед для использования на асфальте</p>
                             </div>
+                            <div class="description">
+                                    22222222222222222<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, ea.
+                                </div>
                         </div>
                         <div class="product-menu">
                             <div class="product-price">$100</div>
@@ -149,6 +159,9 @@
                             <div class="short-description">
                                 <p>Горный велосипед для женщин</p>
                             </div>
+                            <div class="description">
+                                    33333333333333333333<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, ea.
+                                </div>
                         </div>
                         <div class="product-menu">
                             <div class="product-price">$100</div>
@@ -183,12 +196,39 @@
 
     </main>
 
+    <aside class="aside-cart">
+          
+        <span class=" close"><i class="far fa-times-circle fa-2x"></i></span>
+
+    </aside>
+
+    <div class="product-detail__expand">
+        <span class=" close-detail"><i class="far fa-times-circle fa-2x"></i></span>
+        <h3>Расширенное описание велосипеда</h3>
+        <p>
+
+        </p>
+        <img src="" alt="">
+    </div>
+
     <footer>
 
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
+
+     $('.products-dropdown').on('click', function(){
+         $(this).parents('body').find('.dropdown-menu').toggle('slow');
+     });
+    
+    $('.shopping-cart').on('click',function(e){
+        $(e.target).parents('body').find('.aside-cart').show(200);
+    });
+
+    $('.close').on('click', function(e){
+        $(e.target).parents('body').find('.aside-cart').hide(200);
+    });
     
     $('.buy-now').each(function(index, element){
         $(element).on('click', function(e){
@@ -208,11 +248,51 @@
         });
     });
 
+    $('.product-detail').each(function(index, element){
+        $(element).on('click',function(e){
+            $(e.target).parents('body').find('.product-detail__expand').show('fast');   
+        });
+    });
+
+
+    $('.close-detail').on('click',function(e){
+        $(e.target).parents('body').find('.product-detail__expand').hide('fast'); 
+    });
+
     $('.add-to-cart').each(function(index, element){
         $(element).on('click', function(e){
             var y = 180;
             $(e.target).parents('.product-wrapper').css('transform','rotateY('+y+'deg)');
             $(e.target).parents('.grid-item').find('.product-back').addClass('back-is-visible');
+
+            var imgCart = $(e.target).parents('.product').find('img').eq(0);
+
+            if(imgCart){
+                var imgClone = imgCart.clone()
+                .offset({
+                    top: imgCart.offset().top,
+                    left: imgCart.offset().left
+                })
+
+                .css({
+                    'position':'absolute',
+                    'z-index':'9999999',
+                    'border-radius':20,
+                    'opacity':0.7
+                })
+
+                .appendTo($('body')).animate({
+                    'top':$('.shopping-cart').offset().top+10,
+                    'left':$('.shopping-cart').offset().left+10,
+                    'width':50,
+                    'heigth':50
+                },3000)
+            }
+
+            imgClone.animate({'width':0,'heigth':0},function(){$(this).detach()});
+
+
+
 
             $(e.target).parents('.product-wrapper').delay(2000).queue(function(){
             $(this).css('transform','rotateY(0deg)').dequeue();
@@ -237,6 +317,8 @@
         
 
     });
+
+   
 
 
 

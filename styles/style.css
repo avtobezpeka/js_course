@@ -143,7 +143,7 @@ h6 {
 /* Header-Navigation */
 .header-fixed {
     position: fixed;
-    z-index: 99999;
+    z-index: 999;
     /* width: 1280px; */
     margin-bottom: 0px;
     background-color: white;
@@ -239,6 +239,23 @@ ul.nav_ul > .active > a {
 
 ul.nav_ul > li > a:hover {
     color: green;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top:100%;
+    left: 8%;
+    width: 84% !important;
+    min-width: 300px;
+    height:500px;
+    box-shadow: 0 4px 13px 3px rgba(173, 173, 173, 0.5);
+    margin:0 auto;
+    background-color: white;
+    display: none;
+}
+
+.dropdown-menu__search {
+    margin: 1.5em 20%;
 }
 
 .header {
